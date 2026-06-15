@@ -12,9 +12,17 @@ Execute a classe Main.
 Utilize o menu exibido no terminal para acessar as funcionalidades do sistema.
 Integrantes do Grupo
 
-# NOMES DOS COLABORADORES 
+NOMES DOS COLABORADORES 
+
+
 IGOR SUDRE SANTOS 
+
+
 KAUÃ DA SILVA SILVÉRIO 
+
+
 MATHEUS HENRIQUE BARBOSA DA SILVA 
+
+
 MYLENA ALICE MOURA RODRIGUES 
 
