@@ -28,10 +28,10 @@ public class Cliente {
     }
 
     // ✅ Cadastrar cliente
-    public static void cadastrarCliente(Scanner sc) {
+    public static void cadastrarCliente(Scanner sc) {// passando o scanner como parametro para realizar a leitura dentro do metodo
 
         Cliente c = new Cliente();
-        // Cria um novo cliente
+        // Cria um novo objeto cliente
 
         System.out.print("Nome: ");
         c.setNome(sc.nextLine());
@@ -43,20 +43,20 @@ public class Cliente {
         c.setSenha(sc.nextLine());
 
         // Verifica se CPF já existe
-        for (Cliente cli : clientes) {
-            if (cli.getCpf().equals(c.getCpf())) {
+        for (Cliente cli : clientes) {// cria uma variável cli e  pega um cliente por vez da lista e coloca dentro da variável cli 
+            if (cli.getCpf().equals(c.getCpf())) {// se o cpf do cliente inserido for igual ao o que está na variável que percorreu a lista retorna ao cliente
                 System.out.println("CPF já cadastrado!");
                 return;
             }
         }
 
         clientes.add(c);
-        // Adiciona na lista
+        // Adiciona na lista o cliente 
 
-        System.out.println("Cliente cadastrado!");
+        System.out.println("Cliente cadastrado!");// Exibe a mensagem para ele 
     }
 
-    // ✅ Login
+    //  Login
     public static boolean login(Scanner sc) {
 
         System.out.print("CPF: ");
