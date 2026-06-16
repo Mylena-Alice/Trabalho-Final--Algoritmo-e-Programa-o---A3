@@ -57,7 +57,7 @@ public class Cliente {
     }
 
     //  Login
-    public static boolean login(Scanner sc) {
+    public static boolean login(Scanner sc) {// Passando novamente o scanner como parametro
 
         System.out.print("CPF: ");
         String cpf = sc.nextLine();
@@ -65,9 +65,9 @@ public class Cliente {
         System.out.print("Senha: ");
         String senha = sc.nextLine();
 
-        for (Cliente c : clientes) {
+        for (Cliente c : clientes) {// Novamente insere os clientes dentro de uma variável c, onde puxa as informações do objeto 
 
-            if (c.getCpf().equals(cpf) && c.senha.equals(senha)) {
+            if (c.getCpf().equals(cpf) && c.senha.equals(senha)) {//Verifica se o que está dentro dessa variável é igual ao que o usuário digitou
                 // Verifica CPF e senha
 
                 System.out.println("Login realizado!");
@@ -79,8 +79,8 @@ public class Cliente {
         return false;
     }
 
-    // ✅ Alterar dados
-    public void alterarDados(Scanner sc) {
+    //  Alterar dados
+    public void alterarDados(Scanner sc) {// Passa o Scanner como parametro novamente 
 
         System.out.print("Novo nome: ");
         this.nome = sc.nextLine();
@@ -91,14 +91,16 @@ public class Cliente {
         System.out.println("Dados atualizados!");
     }
 
-    // ✅ Excluir cliente
-    public static void excluirCliente(String cpf) {
+    //  Excluir cliente
+    //Realiza uma verificação por CPF do cliente 
+    public static void excluirCliente(String cpf) {// passa como parametro o CPF, sendo uma variável local
 
-        for (int i = 0; i < clientes.size(); i++) {
+        for (int i = 0; i < clientes.size(); i++) {// i posição de cada cliente na lista 
 
-            if (clientes.get(i).getCpf().equals(cpf)) {
-                clientes.remove(i);
-                System.out.println("Cliente removido!");
+            if (clientes.get(i).getCpf().equals(cpf)) {// pega o cliente da posição i e verifica se o CPF é igual ao CPF digitado pelo usuário
+                clientes.remove(i);// Se for igual ele remove ele da lista usando a sua posição 
+                // A lista é atualizada automaticamente quando usamos add e remove
+                System.out.println("Cliente removido!");// Exibe a mensagem 
                 return;
             }
         }
